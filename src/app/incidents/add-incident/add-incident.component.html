@@ -1,0 +1,43 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Add Incident</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="subject">Subject:</label>
+      <input type="text" formControlName="subject" placeholder="subject" name="subject" class="form-control" id="subject" [ngClass]="{ 'is-invalid': submitted && field.subject.errors }">
+      <div *ngIf="submitted && field.subject.errors" class="invalid-feedback">
+        <div *ngIf="field.subject.errors.required">Subject is requred.</div>
+        <div *ngIf="field.subject.errors.maxlength">Subject should be less than 20 characters.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Desription</label>
+      <input formControlName="description" placeholder="description" name="description" class="form-control" id="description" [ngClass]="{ 'is-invalid': submitted && field.description.errors }">
+      <div *ngIf="submitted && field.description.errors" class="invalid-feedback">
+        <div *ngIf="field.description.errors.required">Description is requred.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="incidentDateTime">Incident DateTime:</label>
+      <input type="datetime-local" formControlName="incidentDateTime" placeholder="incidentDateTime" name="incidentDateTime" class="form-control" id="incidentDateTime" [ngClass]="{ 'is-invalid': submitted && field.incidentDateTime.errors }">
+      <div *ngIf="submitted && field.incidentDateTime.errors" class="invalid-feedback">
+        <div *ngIf="field.incidentDateTime.errors.required">Incident Date an Time is requred.</div>
+       
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="location">location:</label>
+      <input formControlName="location" placeholder="location" name="location" class="form-control" id="location" [ngClass] ="{'is-invalid': submitted && field.location.errors}">
+      <div *ngIf="submitted && field.location.errors" class="invalid-feedback">
+        <div *ngIf="field.location.errors.required">Incident location is requred.</div>
+      </div>
+    </div>
+
+
+
+    <button class="btn btn-success">Add</button>
+  </form>
+</div>
+

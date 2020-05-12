@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\core",
+    "\\src\\app\\incidents",
+    "\\src\\app\\incidents\\add-incident",
+    "\\src\\app\\incidents\\edit-incident",
+    "\\src\\app\\incidents\\list-incident",
+    "\\src\\app\\models",
+    "\\src\\app\\services"
+  ],
+  "SelectedNode": "\\src\\app\\incidents\\list-incident\\list-incident.component.ts",
+  "PreviewInSolutionExplorer": false
+}

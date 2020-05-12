@@ -1,0 +1,29 @@
+<div class="col-md-8 incident-container">
+  <h2 style="margin: auto"> Incident Details</h2>
+  <button class="btn btn-success mr-3"  (click)="addIncident()"> Add Incident</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Subject</th>
+        <th>Description</th>
+        <th>Incident Date and Time</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let incident of incidents">
+        <td>{{incident.id}}</td>
+        <td>{{incident.subject}}</td>
+        <td>{{incident.description}}</td>
+        <td>{{incident.incidentDateTime}}</td>
+        <td>{{incident.location}}</td>
+        <td>
+          <button class="btn btn-success mr-3"  (click)="deleteIncident(incident)"> Delete</button>
+          <button class="btn btn-success mr-3" (click)="editIncident(incident)"> Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
